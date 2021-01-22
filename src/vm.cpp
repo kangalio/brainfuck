@@ -35,8 +35,10 @@ void BrainfuckVm::step() {
 	_instr_ptr++;
 }
 
+bool BrainfuckVm::is_done() {
+	return _instr_ptr >= _instrs.size();
+}
+
 void BrainfuckVm::run_to_end() {
-	while (_instr_ptr < _instrs.size()) {
-		step();
-	}
+	while (!is_done()) step();
 }

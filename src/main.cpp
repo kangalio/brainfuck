@@ -68,7 +68,8 @@ int main(int argc, char **argv) {
 		return 0;
 	}
 
-	auto code = parse(read_to_string(path));
+	auto file_contents = read_to_string(path);
+	auto code = parse(file_contents);
 	if (debug) print_instructions(code);
 	BrainfuckVm vm(code, 30000); // Memory size 30k is standard for brainfuck
 	vm.run_to_end();

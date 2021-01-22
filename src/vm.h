@@ -9,7 +9,12 @@ class BrainfuckVm {
 public:
 	BrainfuckVm(std::vector<Instr> instrs, size_t tape_size);
 
+	// Execute a single instruction (remember that an instruction may consist of several brainfuck
+	// characters)
 	void step();
+	// Returns whether all instructions have been executed
+	bool is_done();
+	// Execute all instructions until the end is reached
 	void run_to_end();
 
 private:

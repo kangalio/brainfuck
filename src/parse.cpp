@@ -2,7 +2,7 @@
 #include <cstddef>
 #include <endian.h>
 
-std::vector<Instr> parse(std::string code) {
+std::vector<Instr> parse(std::string &code) {
 	std::vector<size_t> stack;
 
 	std::vector<Instr> instrs;
