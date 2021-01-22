@@ -5,7 +5,8 @@ This project implements a simple optimizing interpreter of the esoteric
 invented by Urban Müller in 1993.
 
 Please see the wikipedia page for an introduction to the language, in case you're not familiar
-already.
+already: https://en.wikipedia.org/wiki/Brainfuck. For especially interested folks, refer to the
+[Esolangs wiki page](https://esolangs.org/wiki/Brainfuck).
 
 This interpreter analyzes the code ahead of time and merges subsequent operations together into
 single, more performant instructions.
@@ -25,7 +26,14 @@ make -j6
 Invoke the program with no parameters to get usage information. Invoke the program with a path to
 a brainfuck file to execute it.
 
-To get started, you can try out some of the supplied sample programs in the `samples/` folder.
+To get started, you can try out some of the supplied sample programs in the `samples/` folder:
+- `helloworld.bf` - Every programmer's first introduction to a language
+- `rot13.bf` - Accepts input on the terminal and encrypts it using the [ROT13 cipher](https://en.wikipedia.org/wiki/ROT13)
+- `bottles.bf` - Prints the lyrics of the computer-science-famous song "99 Bottles Of Beer"
+- `mandelbrot.bf` - Renders the [Mandelbrot fractal](https://en.wikipedia.org/wiki/Mandelbrot_set)
+
+For more examples, check out
+[this repository by fabianishere](https://github.com/fabianishere/brainfuck/tree/master/examples).
 
 ## Code structure
 

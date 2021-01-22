@@ -13,7 +13,7 @@ public:
 	// characters)
 	void step();
 	// Returns whether all instructions have been executed
-	bool is_done();
+	bool is_done() const;
 	// Execute all instructions until the end is reached
 	void run_to_end();
 
