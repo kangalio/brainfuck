@@ -64,13 +64,17 @@ int main(int argc, char **argv) {
 	if (path == nullptr) {
 		std::cout << "Usage: " << argv[0] << " [-d] <file_to_execute>\n";
 		std::cout << "Flags:\n";
-		std::cout << " -d: print debug information";
+		std::cout << " -d: print debug information\n";
 		return 0;
 	}
 
 	auto file_contents = read_to_string(path);
 	auto code = parse(file_contents);
-	if (debug) print_instructions(code);
+	if (debug) {
+		std::cout << "List of parsed instructions:\n";
+		print_instructions(code);
+		std::cout << "\n";
+	}
 	BrainfuckVm vm(code, 30000); // Memory size 30k is standard for brainfuck
 	vm.run_to_end();
 }
