@@ -1,6 +1,6 @@
 #pragma once
 #include <array>
-#include <bits/stdint-uintn.h>
+#include <cstdint>
 #include <string>
 #include <vector>
 #include "structures.h"
